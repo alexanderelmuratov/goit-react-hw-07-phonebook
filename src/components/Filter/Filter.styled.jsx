@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const FilterLabel = styled.label`
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
   width: 220px;
   text-align: center;
   margin-left: auto;

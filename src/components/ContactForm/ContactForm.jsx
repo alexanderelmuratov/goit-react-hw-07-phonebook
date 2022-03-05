@@ -1,11 +1,10 @@
 import { useState } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import toast from 'react-hot-toast';
-import { nanoid } from 'nanoid';
 import { MdPerson, MdPhone } from 'react-icons/md';
 import { Form, FormLabel, SearchInput, FormButton } from './ContactForm.styled';
 import { getContacts } from 'redux/contacts/contacts-selectors';
-import { addContact } from 'redux/contacts/contacts-actions';
+import { addContact } from 'redux/contacts/contacts-operations';
 
 export const ContactForm = () => {
   const [name, setName] = useState('');
@@ -44,26 +43,25 @@ export const ContactForm = () => {
     );
 
     if (existingContacts) {
-      toast.error(`${name} is already in contacts!`);
+      toast.error(`"${name}" is already in contacts!`);
       resetForm();
       return;
     }
 
     const item = {
-      id: nanoid(),
       name,
       number,
     };
 
     dispatch(addContact(item));
-    toast.success(`${name} added to contacts!`);  
+    toast.success(`"${name}" added to contacts!`);  
     resetForm();
   };
 
   return (
     <Form onSubmit={handleSubmit}>
       <FormLabel>
-        <MdPerson style={{ width: 18, height: 18, marginRight: '5px' }} />
+        <MdPerson style={{ width: 23, height: 23, marginRight: '5px' }} />
         Name        
         <SearchInput
           type="text"
@@ -77,7 +75,7 @@ export const ContactForm = () => {
         />
       </FormLabel>
       <FormLabel>
-        <MdPhone style={{ width: 18, height: 18, marginRight: '5px' }} />
+        <MdPhone style={{ width: 23, height: 23, marginRight: '5px' }} />  
         Number        
         <SearchInput
           type="tel"

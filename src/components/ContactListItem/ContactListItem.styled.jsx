@@ -2,7 +2,11 @@ import styled from 'styled-components';
 
 export const ContactSetUnit = styled.li`
   display: flex;
-  justify-content: space-between;
+  color: #034f84;
+
+  &:hover {    
+    color: #F2552C;
+  }
 
   &:not(:last-child) {
     margin-bottom: 5px;
@@ -17,7 +21,8 @@ export const ContactInfo = styled.p`
 `;
 
 export const DeleteButton = styled.button`
-  width: 80px;
+  width: 70px;
+  margin-left: auto;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.5;
@@ -31,6 +36,7 @@ export const DeleteButton = styled.button`
   transition: all cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 
   &:hover {
+    font-weight: 700;
     background-color: #F2552C;
   }
 `;

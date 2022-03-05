@@ -1,4 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
+import { MdPerson } from 'react-icons/md';
 import { FilterLabel, SearchInput } from './Filter.styled';
 import { getFilter } from "redux/contacts/contacts-selectors";
 import { filterContact } from 'redux/contacts/contacts-actions';
@@ -10,6 +11,7 @@ export const Filter = () => {
 
   return (
     <FilterLabel>
+      <MdPerson style={{ width: 23, height: 23, marginRight: '5px' }} />
       Find contact by name
       <SearchInput
         type="text"

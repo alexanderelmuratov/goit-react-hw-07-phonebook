@@ -14,7 +14,6 @@ export const Form = styled.form`
 export const FormLabel = styled.label`
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   margin-bottom: 10px;
   font-weight: 400;
   font-size: 16px;
@@ -53,6 +52,7 @@ export const FormButton = styled.button`
   transition: all cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 
   &:hover {
+    font-weight: 700;
     background-color: #F2552C;
   }
 `;

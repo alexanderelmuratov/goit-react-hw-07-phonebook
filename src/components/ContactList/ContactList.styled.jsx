@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const ContactSet = styled.ul`
-  width: 360px;
   padding: 10px;
   margin-left: auto;
   margin-right: auto;
