@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const PhonebookSection = styled.section`
-  width: 480px;
+  width: 600px;
   padding: 20px 20px;
   margin: 20px auto;
   background-color: #EDF1FF;
